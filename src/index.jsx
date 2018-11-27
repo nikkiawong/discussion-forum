@@ -6,8 +6,10 @@ import { HashRouter } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import postListReducer from './reducers/post-list-reducer';
+import voteReducer from './reducers/vote-reducer';
+import rootReducer from './reducers/index';
 
-const store = createStore(postListReducer);
+const store = createStore(rootReducer);
 
 let unsubscribe = store.subscribe(() =>
   console.log(store.getState())

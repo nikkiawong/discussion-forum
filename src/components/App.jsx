@@ -14,7 +14,8 @@ class App extends React.Component {
     super(props);
     console.log(props);
     this.state = {
-      selectedPost: null
+      selectedPost: null,
+      voteCount: 0
     };
   }
 
@@ -34,7 +35,7 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    masterPostList: state
+    masterPostList: state.masterPostList
   };
 };
 

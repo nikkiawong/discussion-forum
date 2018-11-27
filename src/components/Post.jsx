@@ -1,13 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 function Post(props) {
+
+function handleIncrement(event) {
+  console.log('click');
+  const { dispatch } = props;
+  event.preventDefault();
+  const action = {
+    type: 'INCREMENT'
+  };
+  dispatch(action);
+}
+
   return (
     <div>
       <p>Posted by {props.username}</p>
-      // <p>{props.timePosted}</p>
       <h3>{props.title}</h3>
       <p>{props.content}</p>
+      <button onClick={handleIncrement}>+</button>
+      <button>-</button>
     </div>
   );
 }
@@ -19,4 +32,4 @@ Post.propTypes = {
   // timePosted: PropTypes.object.isRequired
 };
 
-export default Post;
+export default connect()(Post);
