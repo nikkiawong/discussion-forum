@@ -16,8 +16,8 @@ function NewPostForm(props){
       id: v4(),
       title: _title.value,
       username: _username.value,
-      content: _content.value
-      // timePosted: new Moment()
+      content: _content.value,
+      voteCount: 0
     };
     dispatch(action);
     _title.value = '';

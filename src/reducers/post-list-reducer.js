@@ -1,13 +1,13 @@
 export default (state = {}, action) => {
   switch (action.type) {
   case 'ADD_POST':
-    const { title, username, content, id } = action;
+    const { title, username, content, voteCount, id } = action;
     let newState = Object.assign({}, state, {
       [id]: {
         title: title,
         username: username,
         content: content,
-        // timePosted: timePosted,
+        voteCount: voteCount,
         id: id
       }
     });

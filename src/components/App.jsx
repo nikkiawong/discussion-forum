@@ -14,8 +14,7 @@ class App extends React.Component {
     super(props);
     console.log(props);
     this.state = {
-      selectedPost: null,
-      voteCount: 0
+
     };
   }
 

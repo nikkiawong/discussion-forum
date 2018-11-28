@@ -10,7 +10,6 @@ function PostList(props) {
         return <Post title={post.title}
           username={post.username}
           content={post.content}
-          
           key={postId}
           postId={postId}/>;
       })}
